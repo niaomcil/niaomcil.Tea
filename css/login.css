@@ -1,0 +1,168 @@
+body{
+            margin: 0 auto;
+            width: 1300px;
+            height:100%;
+        }
+		#header{
+            width: 1200px;
+            height:150px;
+            top: 0px;
+            text-align: center;
+        }
+		#header .left{
+            margin-left: 110px;
+            float:left;
+        }
+        #header .logo1{
+            height: 140px;
+            margin-bottom:0px;
+            margin-top: 20px;
+        }
+        #header .logo2{
+            height: 80px;
+            margin-left:-20px;
+            margin-bottom:15px;
+        }
+		#header .right{
+            width: 720px;
+            float:left;
+            margin-top:80px;
+            height:50px;
+            margin-left: -30px;
+        }
+		#header .headnav{
+            height: 50px;
+            list-style:none;
+            margin-top: 0px;
+            text-align: center;
+        }
+		#header .headnav li{
+            height: 42px;
+            width:130px;
+            float:left;
+            margin-left: 30px;
+            font-size: 17px;
+        }
+        #header .dark{
+            background-color: #59a616;
+        }
+        #header a{
+            text-decoration: none;
+        }
+        #header .headnav p{
+            margin-top:10px;
+            color: white;
+        }
+        #headphoto{
+            width: 1100px;
+            height:500px;
+            margin: 10px auto;
+            background-size: cover;
+            background-image: url(../img/11.jpg);
+        }
+		#box1{
+			width:400px;
+			height:400px;
+            float: right;
+            margin-top: 50px;
+            margin-right: 40px;
+            background-color: #e8f0c1;
+		}
+        #bottom div{
+            height: 100px;
+        }
+        #bottom p{
+            text-align: center;
+            margin-top: 20px;
+        }
+        a img{
+            border:0;
+        }
+
+        .hidden{
+            display:none;
+    }/*隐藏*/
+
+        /*日记的选项卡*/
+        div.tab ul{
+            margin:0;
+            padding:0;
+            list-style:none;
+    }
+        div.tab ul li{
+            width: 200px;
+            height: 60px;
+            font-size: 25px;
+            float:left;
+    }
+        div.tab ul li.s{
+            width: 200px;
+            height: 60px;
+            padding-bottom:0;
+    }
+        div.tab a{
+            text-align:center;
+            width:200px;
+            display:block;
+            text-decoration:none;
+            color:#658A16;
+            background:#E2F3B8;
+            height:60px;
+            line-height:60px;
+    }
+        div.tab li.s a{
+            background:#658A16;
+            color:#E2F3B8;
+            height:26px;
+            height:60px;
+            line-height:60px;
+            font-weight:bold;
+            cursor:default;
+    }
+        div.tab a:hover{
+            background:#658A16;
+            color:#E2F3B8;
+    }
+        div.tab li.s a:hover{
+            text-decoration:none;
+    }
+        div.content{
+            width: 450px;
+            height: 300px;
+            clear:both;
+    }
+    #c_login{
+        width: 400px;
+        height: 300px;
+    }
+    .form1{
+        padding-top: 10px;
+    }
+    #box1 p{
+        font-size: 27px;
+        margin-top: 40px;
+        text-align: center;
+    }
+    .input{
+        line-height: 28px;
+        width: 250px;
+        margin-left: 15px;
+    }
+    #button1{
+        padding-top: 20px;
+    }
+    .button{
+        font-size: 30px;
+        width: 150px;
+        height: 60px;
+        margin: 0 auto;
+        color: #ffffff;
+        background-color: #db893d;
+    }
+    #c_regist{
+        width: 400px;
+        height: 300px;
+    }
+    .form2{
+        padding-top: 10px;
+    }

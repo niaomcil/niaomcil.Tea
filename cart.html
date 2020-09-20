@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>芊果-我的购物车</title>
+	<link rel="shortcut icon" href="images/logo.png">
+	<link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/carts.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/view.css">
+	<link rel="stylesheet" type="text/css" href="css/welcome.css">
+
+</head>
+<body>
+<!-- 导航banner start -->
+<div class="view-banner">
+	<div class="view-banner-nav">
+		<ul>
+			<li>首页</li>
+			<li>分类</li>
+			<li>果趣</li>
+			<li>关于</li>
+			<li>
+				<form>
+					<input style="width: 150px;" class="view-banner-nav-input" type="text" name="">
+					<input class="view-banner-nav-sub" value="" type="submit" name="">			
+				</form>
+			</li>
+			<li><img class="view-banner-nav-user" src="images/user.png"></li>
+			<li><img class="view-banner-nav-cart" src="images/cart.png"></li>
+		</ul>
+	</div>
+</div>
+<!-- 导航banner end -->
+<div style="clear: both;"></div>
+<!-- 购物车 start -->
+<div>
+    <section class="cartMain">
+        <div class="cartMain_hd">
+            <ul class="order_lists cartTop">
+                <li class="list_chk">
+                    <!--所有商品全选-->
+                    <input type="checkbox" id="all" class="whole_check">
+                    <label for="all"></label>
+                    全选
+                </li>
+                <li class="list_con">商品信息</li>
+                <li class="list_info">商品参数</li>
+                <li class="list_price">单价</li>
+                <li class="list_amount">数量</li>
+                <li class="list_sum">金额</li>
+                <li class="list_op">操作</li>
+            </ul>
+        </div>
+
+        <div class="cartBox">
+            <div class="order_content">
+                <ul class="order_lists">
+                    <li class="list_chk">
+                        <input type="checkbox" id="checkbox_2" class="son_check">
+                        <label for="checkbox_2"></label>
+                    </li>
+                    <li class="list_con">
+                        <div class="list_img"><a href="javascript:;"><img src="./images/pineapple.png" alt=""></a></div>
+                        <div class="list_text"><a href="javascript:;">海南三亚冰糖心香水菠萝凤梨4个时令特产新鲜水果 </a></div>
+                    </li>
+                    <li class="list_info">
+                        <p>规格：4个</p>
+                    </li>
+                    <li class="list_price">
+                        <p class="price">￥980</p>
+                    </li>
+                    <li class="list_amount">
+                        <div class="amount_box">
+                            <a href="javascript:;" class="reduce reSty">-</a>
+                            <input type="text" value="1" class="sum">
+                            <a href="javascript:;" class="plus">+</a>
+                        </div>
+                    </li>
+                    <li class="list_sum">
+                        <p class="sum_price">￥980</p>
+                    </li>
+                    <li class="list_op">
+                        <p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
+                    </li>
+                </ul>
+                <ul class="order_lists">
+                    <li class="list_chk">
+                        <input type="checkbox" id="checkbox_3" class="son_check">
+                        <label for="checkbox_3"></label>
+                    </li>
+                    <li class="list_con">
+                        <div class="list_img"><a href="javascript:;"><img src="./images/pineapple.png" alt=""></a></div>
+                        <div class="list_text"><a href="javascript:;">海南三亚冰糖心香水菠萝凤梨4个时令特产新鲜水果 </a></div>
+                    </li>
+                    <li class="list_info">
+                        <p>规格：4个</p>
+                    </li>
+                    <li class="list_price">
+                        <p class="price">￥780</p>
+                    </li>
+                    <li class="list_amount">
+                        <div class="amount_box">
+                            <a href="javascript:;" class="reduce reSty">-</a>
+                            <input type="text" value="1" class="sum">
+                            <a href="javascript:;" class="plus">+</a>
+                        </div>
+                    </li>
+                    <li class="list_sum">
+                        <p class="sum_price">￥780</p>
+                    </li>
+                    <li class="list_op">
+                        <p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
+                    </li>
+                </ul>
+                <ul class="order_lists">
+                    <li class="list_chk">
+                        <input type="checkbox" id="checkbox_6" class="son_check">
+                        <label for="checkbox_6"></label>
+                    </li>
+                    <li class="list_con">
+                        <div class="list_img"><a href="javascript:;"><img src="./images/pineapple.png" alt=""></a></div>
+                        <div class="list_text"><a href="javascript:;">海南三亚冰糖心香水菠萝凤梨4个时令特产新鲜水果 </a></div>
+                    </li>
+                    <li class="list_info">
+                        <p>规格：4个</p>
+                    </li>
+                    <li class="list_price">
+                        <p class="price">￥180</p>
+                    </li>
+                    <li class="list_amount">
+                        <div class="amount_box">
+                            <a href="javascript:;" class="reduce reSty">-</a>
+                            <input type="text" value="1" class="sum">
+                            <a href="javascript:;" class="plus">+</a>
+                        </div>
+                    </li>
+                    <li class="list_sum">
+                        <p class="sum_price">￥180</p>
+                    </li>
+                    <li class="list_op">
+                        <p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--底部-->
+        <div class="bar-wrapper">
+            <div class="bar-right">
+                <div class="piece">已选商品<strong class="piece_num">0</strong>件</div>
+                <div class="totalMoney">共计: <strong class="total_text">0.00</strong></div>
+                <div class="calBtn"><a href="javascript:;">结算</a></div>
+            </div>
+        </div>
+    </section>
+    <section class="model_bg"></section>
+    <section class="my_model">
+        <p class="title">删除宝贝<span class="closeModel">X</span></p>
+        <p>您确认要删除该宝贝吗？</p>
+        <div class="opBtn"><a href="javascript:;" class="dialog-sure">确定</a><a href="javascript:;" class="dialog-close">关闭</a></div>
+    </section>
+</div>
+<!-- 购物车 end -->
+<div class="index-six-footer">
+    <div style="width:1300px;margin: 50px auto;padding-top: 20px;">
+        <img src="images/logo_14.png">
+        <div class="index-six-footer-info">
+            <table>
+                <tr>
+                    <th>WeChat</th>
+                    <th>配送说明</th>
+                    <th>售后服务</th>
+                    <th>企业服务</th>
+                </tr>
+                <tr>
+                    <td colspan="4"><hr style=" height:2px;border:none;border-top:2px solid #91c056; margin: 10px auto;" /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="images/erweima_17.png">
+                    </td>
+                    <td>
+                            运费说明<br />     运费方式<br />     发票说明
+                    </td>
+                    <td>
+                            退换货规则<br />     服务保障承诺<br />     验货与签收
+                    </td>
+                    <td>
+                            企业订购<br />     公司简介<br />     定制专区  
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="index-six-footer-copy">
+            <p>版权所有&nbsp;©2017海南芊果电子商务有限公司&nbsp;保留所有权利&nbsp;|&nbsp;琼ICP备12042163</p>
+        </div>
+        <img class="index-six-footer-grass" src="images/grass.png">
+    </div>
+</div>
+
+<!-- jQuery库 -->
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<!-- 购物车 -->
+<script src="js/carts.js"></script>
+</body>
+</html>

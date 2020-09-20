@@ -1,0 +1,290 @@
+        ul,li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }  
+        a:hover {
+            cursor: pointer;
+            text-decoration: none;
+        } 
+        a:link {
+            text-decoration: none;
+        }
+        #left{
+            width:160px;
+            color: black;
+            position:fixed;
+            left:10px;
+            top:70px;
+            text-align:center;
+        }
+        #left img{
+            width: 160px;
+        }
+        #right{
+            width:160px;
+            height: 550px;
+            color: black;
+            position:fixed;
+            right: 10px;
+            top:70px;
+            text-align:center;
+        }
+        #right img{
+            width: 160px;
+        }
+        #body{
+            margin: 0 auto;
+            width: 1300px;
+            height:100%;
+        }
+        #head{
+            height: 30px;
+            width: 100%;
+            background-color:#b4cba1;
+            position: fixed;
+            color: #203f16;
+            top: 0;
+            margin-left: -7px;
+        }
+        #head p {
+            margin-top: 0px;
+            margin-left: 300px;
+        }
+        #head a {
+            color: aliceblue;
+            margin-left: 30px;
+            text-decoration: none;
+        }
+		#header{
+            width: 1200px;
+            height:150px;
+            top: 0px;
+            text-align: center;
+        }
+		#header .left{
+            color: #203f16;
+            margin-left: 110px;
+            float:left;
+        }
+        #header .logo1{
+            height: 140px;
+            margin-bottom:0px;
+            margin-top: 20px;
+        }
+        #header .logo2{
+            height: 80px;
+            margin-left:-20px;
+            margin-bottom:15px;
+        }
+		#header .right{
+            width: 720px;
+            float:left;
+            margin-top:80px;
+            height:50px;
+            margin-left: -30px;
+        }
+		#header .headnav{
+            height: 50px;
+            list-style:none;
+            margin-top: 0px;
+            text-align: center;
+        }
+		#header .headnav li{
+            height: 42px;
+            width:130px;
+            float:left;
+            margin-left: 30px;
+            font-size: 17px;
+        }
+        #header .dark{
+            background-color: #59a616;
+        }
+        #header a{
+            text-decoration: none;
+        }
+        #header .headnav p{
+            margin-top:10px;
+            color: white;
+        }
+        #main{
+            width: 1100px;
+            height: 500px;
+            margin-top: 30px;
+            margin-left: 145px;
+        }
+        #main .left{
+            width: 458px;
+            height: 498px;
+            float: left;
+            border: 1px solid gray;
+        }
+        #main .right{
+            margin-left: 0px;
+            width: 548px;
+            height: 498px;
+            float: left;
+            border: 1px solid gray;
+        }
+        #pic{
+            width: 1010px;
+            height: auto;
+            margin-top: 30px;
+            margin-left: 145px;
+        }
+		#pic img{
+            width: 1010px;
+        }
+        #photo nav{
+            width: 450px;
+            height: 500px;
+            margin:20px auto;
+            overflow: hidden;
+            position: relative;
+            margin-top: 0px;
+        }
+		#index{
+			list-style:none;
+            width: 400px;
+            position: absolute;
+            left:100px;
+            bottom: 0px;
+        }
+        #index li{
+            width: 50px;
+            height: 54px;
+            display: inline-block;
+            margin-left: 10px;
+        }
+		#index img{
+            width: 50px;
+        }
+		#index .on{
+			border: 1px solid;
+		}
+        #img{
+			margin-left:70px;
+			list-style:none;
+            width: 350px;
+            height: 470px;
+            position: absolute;
+            z-index: -1;
+        }
+        #img li{
+            width: 350px;
+            height: 627px;
+            float: left;
+        }
+        #img img{
+            width: 370px;
+            margin-left:-70px;
+        }
+		#w1{
+			
+			margin-left:40px;
+			margin-top:50px;
+		}
+		#w2{
+			margin-left:15px;
+			margin-top:23px;
+			float:left;
+		}
+		#w3{
+			float:left;
+			font-size:29px;
+			color:#363;
+			margin-left:10px;
+			margin-top:16px;
+		}
+		#w4{
+			margin-left:42px;
+		}
+		#w5{
+			font-size:14px;
+			color:#C00;
+			float:right;
+			margin-top:auto;
+			margin-top:4px;
+			margin-right:100px;	
+		}
+		#input{
+			margin-left:30px;
+			}
+		.input{
+			text-align:center;
+		}
+		
+		#box1{
+			width:500px;
+			height:70px;
+			margin-left:23px;
+			background:#dcedc1;
+			}
+		#box2{
+			float:left;
+			margin-left:105px;
+			margin-top:-45px;
+			width:230px;
+			height:80px;
+		}
+        #box2 input{
+			margin-top: 8px;
+		}
+		.btn{
+			background:#FFF;
+			width:60px;
+			margin-right:10px;
+		}
+		.btn1{
+			width:30px;
+			height:30px;
+            font-size: 15px;
+            background-color: white;
+            box-shadow:0px 0px 0px black;
+			text-align:center;
+        }
+        #num-jian{
+            margin-left: 20px;
+        }
+        #num-jia{
+            margin-left: -4px;
+        }
+		.btn3{
+			height:45px;
+			background:#fcffca;
+			color:#bd9b30;
+			font-size:18px;
+			font-weight:bold;
+			border:3px solid #aab06a;
+			margin-left:50px;
+			margin-top:30px;
+		}
+		.btn4{
+			height:45px;
+			background:#faba8a;
+			color:#fefefe;
+			font-size:18px;
+			font-weight:bold;
+			border:3px solid #c37b31;
+			margin-left:10px;
+			margin-top:30px;
+		}
+		.t1{
+			height:26px;
+			text-align:center;
+            margin-left: -4px;
+            margin-top: -10px;
+		}
+		#bottom img{
+            width: 100%;
+            display: block;
+            background-size: cover;
+        }
+        #bottom div{
+            height: 100px;
+        }
+        #bottom p{
+            text-align: center;
+            margin-top: 20px;
+        }

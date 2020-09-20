@@ -1,0 +1,147 @@
+﻿create DATABASE TEA CHARACTER SET gbk COLLATE gbk_chinese_ci;
+
+CREATE TABLE tea.User(id int auto_increment not null,
+		       username varchar(10) NOT null DEFAULT '',
+                       password varchar(32) NOT null DEFAULT '',
+                       PRIMARY KEY(id));
+
+CREATE TABLE tea.product(id int auto_increment not null,
+		       type varchar(20) NOT null DEFAULT '',
+		       name varchar(20) NOT null DEFAULT '',
+		       level varchar(20) NOT null DEFAULT '',
+		       price decimal(10,2) NOT NULL DEFAULT 0,
+		       intro varchar(30) NOT null DEFAULT '',
+                       PRIMARY KEY(id));
+
+CREATE TABLE tea.tealocation(id int auto_increment not null,
+		       teatype varchar(10) NOT null DEFAULT '',
+		       location varchar(20) NOT null DEFAULT '',
+                       title varchar(20) NOT null DEFAULT '',
+		       intro varchar(120) NOT null DEFAULT '',
+                       PRIMARY KEY(id));
+
+CREATE TABLE tea.picture(type varchar(10) NOT null DEFAULT '',
+		       typename varchar(20) NOT null DEFAULT '',
+		       name varchar(20) NOT null DEFAULT '',
+		       imgsrc varchar(50) NOT null DEFAULT '',
+		       imgname varchar(50) NOT null DEFAULT ''
+                       );
+
+CREATE TABLE tea.cart(userid int NOT null DEFAULT 0,
+		       producttype varchar(20) NOT null DEFAULT '',
+		       productid int NOT null DEFAULT 0,
+		       sum int NOT null DEFAULT 1
+                       );
+
+INSERT INTO tea.product (name, level, price,intro) VALUES ('碧螺春', '特一级', '1750','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('碧螺春', '特二级', '1000','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('碧螺春', '一级', '700','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('碧螺春', '二级', '450','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('碧螺春', '三级', '250','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('黄山毛峰', '特一级', '800','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('黄山毛峰', '特二级', '750','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('黄山毛峰', '特三级', '680','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('黄山毛峰', '一级', '400','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('黄山毛峰', '二级', '330','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('黄山毛峰', '三级', '150','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('君山银针', '珍品', '800','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('六安瓜片', '提片', '660','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('六安瓜片', '梅片', '570','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('六安瓜片', '瓜片', '900','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('庐山云雾茶', '明前茶', '1200','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('庐山云雾茶', '清明茶', '890','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('庐山云雾茶', '谷雨茶', '700','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('庐山云雾茶', '夏茶', '544','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('庐山云雾茶', '秋茶', '340','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('祁门红茶', '礼茶', '2000','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('祁门红茶', '特茗', '1350','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('祁门红茶', '特级', '1200','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('祁门红茶', '一级', '1000','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('祁门红茶', '二级', '830','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('祁门红茶', '三级', '570','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('铁观音', '清香型', '880','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('铁观音', '浓香型', '900','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('武夷岩茶', '大红袍', '889','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('武夷岩茶', '铁罗汉', '1000','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('武夷岩茶', '白鸡冠', '1320','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('武夷岩茶', '水金龟', '699','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('西湖龙井', '特级', '2800','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('西湖龙井', '一级', '1900','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('西湖龙井', '二级', '1590','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('西湖龙井', '三级', '880','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('西湖龙井', '四级', '790','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('西湖龙井', '五级', '500','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('信阳毛尖', '特级', '2600','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('信阳毛尖', '一级', '1750','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('信阳毛尖', '二级', '1240','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('信阳毛尖', '三级', '850','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('信阳毛尖', '四级', '660','');
+INSERT INTO tea.product (name, level, price,intro) VALUES ('信阳毛尖', '五级', '510','');
+
+
+INSERT INTO tea.tealocation (teatype, location, title, intro) VALUES ('黄山毛峰', '安徽黄山', '养生之仙药也，延年之妙术也', '黄山地区，由于山高，土质好，温暖湿润，“晴时早晚遍地雾，阴雨成天满山云”，云雾缥缈，很适合茶树生长，产茶历史悠久。');
+INSERT INTO tea.tealocation (teatype, location, title, intro) VALUES ('君山银针', '安徽岳阳', '白银盘里一青螺', '君山又名洞庭山，为湖南岳阳洞庭湖中岛屿。岛上土壤肥沃，气候非常湿润。春夏季湖水蒸发，云雾弥漫，岛上树木丛生，自然环境适宜茶树生长，山地遍布茶园。');
+INSERT INTO tea.tealocation (teatype, location, title, intro) VALUES ('六安瓜片', '安徽六安', '蝙蝠洞茶场', '蝙蝠洞六安瓜片出品自安徽省金寨县齐山蝙蝠洞附近茶场，因蝙蝠栖居，山洞附近土壤含有大量蝙蝠粪便，是含磷多的高级肥料，所产六安瓜片为六安瓜片极品。');
+INSERT INTO tea.tealocation (teatype, location, title, intro) VALUES ('庐山云雾茶', '江西九江', '在高山云雾中生长', '庐山云雾茶产于江西省九江市的庐山，北临长江、南倚鄱阳湖。群峰挺秀，林木茂密，泉水涌流，雾气蒸腾。在这种氛围中艺植熏制的“庐山云雾茶”，素有“色香幽细比兰花”之喻。');
+INSERT INTO tea.tealocation (teatype, location, title, intro) VALUES ('铁观音', '福建泉州', '饱山岚之气，沐日月之精', '安溪是名茶铁观音的发源地，“宿雨一番蔬甲嫩，春山几焙茗旗香。”安溪已有上千年的产茶历史。安溪铁观音，名扬四海，香溢五洲，已成为中国茶叶第一品牌，也成为福建省一张亮丽名片。');
+INSERT INTO tea.tealocation (teatype, location, title, intro) VALUES ('西湖龙井', '浙江杭州', '中国名茶之首', '乾隆皇帝六次下江南，四次来到西湖龙井茶区观看茶叶采制，品茶赋诗。胡公庙前的十八棵茶树还被封为“御茶”。从此，西湖龙井茶驰名中外，问茶者络绎不绝。');
+
+INSERT INTO tea.product (type, name, level, price, intro) VALUES ('紫砂壶', '宜兴黑金砂','', '560','“人间珠宝何足取，岂如阳羡一丸泥”');
+INSERT INTO tea.product (type, name, level, price, intro) VALUES ('紫砂壶', '二泉铭壶', '', '998','“由清末紫砂壶名家邵二泉设计的名壶”');
+INSERT INTO tea.product (type, name, level, price, intro) VALUES ('紫砂壶', '树瘿壶', '','1900', '“由树瘿制成，供春之壶，胜于金玉”');
+INSERT INTO tea.product (type, name, level, price, intro) VALUES ('瓷盏', '鹧鸪斑纹盏','', '660', '“产自宋代名窑——建窑”');
+INSERT INTO tea.product (type, name, level, price, intro) VALUES ('瓷盏', '兔毫盏', '','1080', '“盏以青绿为上，兔毫为上。——宋徽宗赵佶”');
+INSERT INTO tea.product (type, name, level, price, intro) VALUES ('瓷盏', '青花瓷', '','576', '“花纹蓝白相映成趣，色彩淡雅幽菁可人”');
+INSERT INTO tea.product (type, name, level, price, intro) VALUES ('茶匙', '竹制茶匙组','', '130', '“茶道六君子”');
+INSERT INTO tea.product (type, name, level, price, intro) VALUES ('茶匙', '黑檀木茶匙', '','118', '“黑檀木实木制作”');
+INSERT INTO tea.product (type, name, level, price, intro) VALUES ('茶匙', '不锈钢茶匙','', '35', '“实用性与艺术性相结合”');
+
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('商品图', '紫砂壶', '宜兴黑金砂', 'img/teapot/', 'zsh1.jpg');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('商品图', '紫砂壶', '二泉铭壶', 'img/teapot/', 'zsh2.jpg');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('商品图', '紫砂壶', '树瘿壶', 'img/teapot/', 'zsh3.jpg');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('商品图', '瓷盏', '鹧鸪斑纹盏', 'img/teapot/', 'cz1.jpg');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('商品图', '瓷盏', '兔毫盏', 'img/teapot/', 'cz2.jpg');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('商品图', '瓷盏', '青花瓷', 'img/teapot/', 'cz3.jpg');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('商品图', '茶匙', '竹制茶匙组', 'img/teapot/', 'cc1.jpg');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('商品图', '茶匙', '黑檀木茶匙', 'img/teapot/', 'cc2.jpg');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('商品图', '茶匙', '不锈钢茶匙', 'img/teapot/', 'cc3.jpg');
+
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('产地', '安徽黄山', '黄山毛峰', 'img/location/', 'hsmf.jpg');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('产地', '安徽岳阳', '君山银针', 'img/location/', 'jsyz.png');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('产地', '安徽六安', '六安瓜片', 'img/location/', 'lagp.png');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('产地', '江西九江', '庐山云雾茶', 'img/location/', 'lsywc.png');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('产地', '福建泉州', '铁观音', 'img/location/', 'tgy.png');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('产地', '浙江杭州', '西湖龙井', 'img/location/', 'xhlj.jpg');
+
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('简介', '碧螺春', '', 'img/jianjie/', 'blc.jpg');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('简介', '黄山毛峰', '', 'img/jianjie/', 'hsmf.jpg');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('简介', '铁观音', '', 'img/jianjie/', 'tgy.jpg');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('简介', '武夷岩茶', '', 'img/jianjie/', 'wyyc.jpg');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('简介', '庐山云雾茶', '', 'img/jianjie/', 'lsywc.jpg');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('简介', '西湖龙井', '', 'img/jianjie/', 'xhlj.jpg');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('简介', '祁门红茶', '', 'img/jianjie/', 'qmhc.jpg');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('简介', '六安瓜片', '', 'img/jianjie/', 'lagp.jpg');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('简介', '君山银针', '', 'img/jianjie/', 'jsyz.jpg');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('简介', '信阳毛尖', '', 'img/jianjie/', 'xymj.jpg');
+
+
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('商品图', '茶叶', '碧螺春', 'img/teapic/', 'blc1.jpg');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('商品图', '茶叶', '碧螺春', 'img/teapic/', 'blc2.jpg');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('商品图', '茶叶', '黄山毛峰', 'img/teapic/', 'hsmf1.png');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('商品图', '茶叶', '黄山毛峰', 'img/teapic/', 'hsmf2.jpg');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('商品图', '茶叶', '君山银针', 'img/teapic/', 'jsyz1.jpg');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('商品图', '茶叶', '君山银针', 'img/teapic/', 'jsyz2.jpg');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('商品图', '茶叶', '六安瓜片', 'img/teapic/', 'lagp1.jpg');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('商品图', '茶叶', '六安瓜片', 'img/teapic/', 'lagp2.jpg');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('商品图', '茶叶', '庐山云雾茶', 'img/teapic/', 'lsywc1.png');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('商品图', '茶叶', '庐山云雾茶', 'img/teapic/', 'lsywc2.jpg');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('商品图', '茶叶', '祁门红茶', 'img/teapic/', 'qmhc1.jpg');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('商品图', '茶叶', '祁门红茶', 'img/teapic/', 'qmhc2.jpg');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('商品图', '茶叶', '铁观音', 'img/teapic/', 'tgy1.jpg');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('商品图', '茶叶', '铁观音', 'img/teapic/', 'tgy2.jpg');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('商品图', '茶叶', '武夷岩茶', 'img/teapic/', 'wyyc1.jpg');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('商品图', '茶叶', '武夷岩茶', 'img/teapic/', 'wyyc2.jpg');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('商品图', '茶叶', '西湖龙井', 'img/teapic/', 'xhlj1.png');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('商品图', '茶叶', '西湖龙井', 'img/teapic/', 'xhlj2.jpg');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('商品图', '茶叶', '信阳毛尖', 'img/teapic/', 'xymj1.jpg');
+INSERT INTO tea.picture (type, typename, name, imgsrc, imgname) VALUES ('商品图', '茶叶', '信阳毛尖', 'img/teapic/', 'xymj2.jpg');
